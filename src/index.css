@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+/* Timeline styles */
+.vertical-timeline::before {
+  background: currentColor !important;
+  opacity: 0.2;
+}
+
+.vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px currentColor, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05) !important;
+}
+
+.vertical-timeline-element-content {
+  box-shadow: 0 3px 0 currentColor !important;
+}
+
+.vertical-timeline-element-date {
+  color: inherit !important;
+  opacity: 0.8;
+}
+
+/* Ensure visibility of timeline years in both light and dark modes */
+.vertical-timeline-element-date {
+  color: #4a5568 !important; /* A darker shade of gray for better visibility in light mode */
+}
+
+.dark .vertical-timeline-element-date {
+  color: #cbd5e0 !important; /* A lighter shade of gray for better visibility in dark mode */
+}
+
