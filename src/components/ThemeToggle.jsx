@@ -1,5 +1,5 @@
-import { motion } from "framer-motion"
-import { FiSun, FiMoon } from "react-icons/fi"
+import { motion } from "framer-motion";
+import { FiSun, FiMoon } from "react-icons/fi";
 
 const ThemeToggle = ({ theme, toggleTheme }) => {
   return (
@@ -11,7 +11,7 @@ const ThemeToggle = ({ theme, toggleTheme }) => {
     >
       {theme === "light" ? <FiMoon size={20} /> : <FiSun size={20} />}
     </motion.button>
-  )
-}
+  );
+};
 
-export default ThemeToggle
+export default ThemeToggle;

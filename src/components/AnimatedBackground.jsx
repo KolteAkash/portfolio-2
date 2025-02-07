@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 
 export default function AnimatedBackground() {
@@ -78,5 +77,10 @@ export default function AnimatedBackground() {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="fixed top-0 left-0 w-full h-full pointer-events-none" />;
+  return (
+    <canvas
+      ref={canvasRef}
+      className="fixed top-0 left-0 w-full h-full pointer-events-none"
+    />
+  );
 }
