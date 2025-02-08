@@ -254,7 +254,7 @@ const Contact = () => {
       );
 
       setSubmitMessage(
-        "✅ Thank you for your message! I'll get back to you soon."
+        "Thank you for your message! I will get back to you soon."
       );
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
@@ -367,7 +367,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                 />
               </div>
               <div>
@@ -384,7 +384,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                 />
               </div>
               <div>
@@ -401,7 +401,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                 ></textarea>
               </div>
               <motion.button
@@ -416,9 +416,15 @@ const Contact = () => {
             </motion.form>
 
             {submitMessage && (
-              <div className="mt-4 p-4 bg-green-100 text-green-700 rounded-md">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.5 }}
+                className="mt-4 p-4 bg-green-100 text-green-700 rounded-md"
+              >
                 {submitMessage}
-              </div>
+              </motion.div>
             )}
           </motion.div>
         </div>
