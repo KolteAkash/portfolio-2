@@ -1,20 +1,22 @@
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
-import Masonry from "react-masonry-css"
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import Masonry from "react-masonry-css";
 
 const projects = [
   {
-    title: "Task Management System",
-    description: "A full-stack Task Management System built with Spring Boot and React.",
-    image: "/Task-Management-System.jpg",
-    technologies: ["Spring Boot", "React", "MySQL"],
-    github: "https://github.com/KolteAkash/Task_Managment-System.git",
-    demo: "https://ecommerce-platform-demo.com",
+    title: "Portfolio",
+    description:
+      "Developed a dynamic portfolio using React to showcase my skills, projects, and experience.",
+    image: "/Portfolio.png",
+    technologies: ["React", "Tailwind CSS"],
+    github: "https://github.com/KolteAkash/portfolio-2.git",
+    demo: "https://akashkolte-dev.netlify.app",
   },
   {
     title: "Medical Store Billing App",
-    description: "A responsive Medical Store Billing application using Node.js and React",
+    description:
+      "A responsive Medical Store Billing application using Node.js and React",
     image: "/Medical-Store-Billing-App.png",
     technologies: ["Node.js", "MySQL", "React"],
     github: "https://github.com/KolteAkash/Medical_Billing.git",
@@ -22,16 +24,26 @@ const projects = [
   },
   {
     title: "Studdy Buddy Online Learning Platform ",
-    description: "Developed a Studdy Buddy Online Learning web application by using Servlet,JSP and Spring",
+    description:
+      "Developed a Studdy Buddy Online Learning web application by using Servlet,JSP and Spring",
     image: "/Studdy-Buddy.png",
     technologies: ["Java", "Spring", "RESTful APIs", "JSP", "Servlet"],
     github: "https://github.com/KolteAkash/Online_Job_Portal.git",
     demo: "https://weather-forecast-dashboard-demo.com",
   },
-]
+  {
+    title: "Task Management System",
+    description:
+      "A full-stack Task Management System built with Spring Boot and React.",
+    image: "/Task-Management-System.jpg",
+    technologies: ["Spring Boot", "React", "MySQL"],
+    github: "https://github.com/KolteAkash/Task_Managment-System.git",
+    demo: "https://ecommerce-platform-demo.com",
+  },
+];
 
 const Projects = () => {
-  const [hoveredProject, setHoveredProject] = useState(null)
+  const [hoveredProject, setHoveredProject] = useState(null);
 
   return (
     <section id="projects" className="py-20 bg-gray-100 dark:bg-gray-900">
@@ -76,7 +88,9 @@ const Projects = () => {
                     className="absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center"
                   >
                     <div className="text-white text-center">
-                      <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                      <h3 className="text-xl font-bold mb-2">
+                        {project.title}
+                      </h3>
                       <p className="mb-4">{project.description}</p>
                       <div className="flex justify-center space-x-4">
                         <a
@@ -101,7 +115,9 @@ const Projects = () => {
                 )}
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-indigo-600 dark:text-indigo-400">{project.title}</h3>
+                <h3 className="text-xl font-bold mb-2 text-indigo-600 dark:text-indigo-400">
+                  {project.title}
+                </h3>
                 <div className="flex flex-wrap mb-4">
                   {project.technologies.map((tech, i) => (
                     <span
@@ -118,8 +134,7 @@ const Projects = () => {
         </Masonry>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
-
+export default Projects;

@@ -2,7 +2,7 @@ const knowledgeBase = {
   name: "Akash Kolte",
   role: "Software Developer",
   skills: [
-    "Java SE 8",
+    "Java",
     "Spring Boot",
     "Node.js",
     "React",

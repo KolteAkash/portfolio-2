@@ -425,7 +425,7 @@ const Contact = () => {
               >
                 {submitMessage}
               </motion.div>
-            )}
+            )}  
           </motion.div>
         </div>
       </div>

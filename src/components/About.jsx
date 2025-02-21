@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
-import 'react-vertical-timeline-component/style.min.css';  // Add this import
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css"; // Add this import
 import { FaGraduationCap, FaBriefcase } from "react-icons/fa";
 
 const About = () => {
@@ -23,10 +26,10 @@ const About = () => {
             className="md:w-1/3 mb-8 md:mb-0"
           >
             <img
-              src="/Hero.jpg"
+              src="/About.jpg"
               alt="Akash Kolte"
-              width={300}
-              height={300}
+              width={320}
+              height={320}
               className="rounded-full shadow-lg"
             />
           </motion.div>
@@ -37,26 +40,35 @@ const About = () => {
             className="md:w-2/3 md:pl-12"
           >
             <p className="text-lg mb-6 text-gray-700 dark:text-gray-300">
-            <p>
-                Aspiring Developer | Proficient in Java, ReactJS, HTML, CSS, and JavaScript | Hands-on experience in web and standalone projects | Eager to innovate, learn, and contribute to impactful solutions in a dynamic environment.
-            </p>
+              <p>
+                Aspiring Developer | Proficient in Java, ReactJS, HTML, CSS, and
+                JavaScript | Hands-on experience in web and standalone projects
+                | Eager to innovate, learn, and contribute to impactful
+                solutions in a dynamic environment.
+              </p>
             </p>
             <p className="text-lg mb-6 text-gray-700 dark:text-gray-300">
-            <p>
-                I'm a passionate software developer with expertise in Spring Boot, Node.js, and React. I love creating efficient and scalable solutions to complex problems.
-            </p>
+              <p>
+                I'm a passionate software developer with expertise in Spring
+                Boot, Node.js, and React. I love creating efficient and scalable
+                solutions to complex problems.
+              </p>
 
-            <p className="text-lg mb-6 text-gray-700 dark:text-gray-300"></p>
-            <p>
-            My journey in software development has equipped me with a strong foundation in both frontend and backend technologies with a keen eye for detail and a commitment to writing clean, maintainable code, I strive to deliver
-              high-quality software that meets and exceeds expectations. I'm always eager to learn new technologies and
-              stay up-to-date with the latest industry trends.
+              <p className="text-lg mb-6 text-gray-700 dark:text-gray-300"></p>
+              <p>
+                My journey in software development has equipped me with a strong
+                foundation in both frontend and backend technologies with a keen
+                eye for detail and a commitment to writing clean, maintainable
+                code, I strive to deliver high-quality software that meets and
+                exceeds expectations. I'm always eager to learn new technologies
+                and stay up-to-date with the latest industry trends.
+              </p>
             </p>
-
-          </p>
           </motion.div>
         </div>
-        <h3 className="text-2xl font-bold text-center mb-8 text-indigo-600 dark:text-indigo-400">My Journey</h3>
+        <h3 className="text-2xl font-bold text-center mb-8 text-indigo-600 dark:text-indigo-400">
+          My Journey
+        </h3>
         <VerticalTimeline lineColor="currentColor">
           <TimelineElement
             date="March 2023 - August 2023"
