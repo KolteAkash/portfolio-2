@@ -9,7 +9,6 @@ const Hero = () => {
       className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden"
     >
       <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center">
-        {/* Profile Image - Increased Size Without Stretching */}
         <motion.img
           src="/Hero.jpg"
           alt="Akash Kolte"
@@ -18,16 +17,12 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         />
-
-        {/* Typing Effect Text with Fixed Dimensions */}
         <div className="flex flex-col items-center mb-6">
           <TypingText
             texts={["Hi, I'm Akash Kolte", "A Passionate Software Developer"]}
             className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-600"
           />
         </div>
-
-        {/* Buttons */}
         <div className="flex justify-center space-x-4 mb-8">
           <motion.a
             href="/akashkolte-resume.pdf"
@@ -49,8 +44,6 @@ const Hero = () => {
             Contact Me
           </motion.a>
         </div>
-
-        {/* Social Icons */}
         <div className="flex justify-center space-x-4">
           <SocialIcon href="https://github.com/KolteAkash" icon={FaGithub} />
           <SocialIcon
@@ -67,13 +60,12 @@ const Hero = () => {
   );
 };
 
-// Typing Effect Component with Proper Spacing
 const TypingText = ({ texts, className }) => {
   const [displayTexts, setDisplayTexts] = useState(["", ""]);
   const [charIndex, setCharIndex] = useState(0);
   const [lineIndex, setLineIndex] = useState(0);
-  const typingSpeed = 100; // Typing speed
-  const delayBetweenLines = 1000; // Pause before starting the second line
+  const typingSpeed = 100;
+  const delayBetweenLines = 1000;
 
   useEffect(() => {
     if (charIndex < texts[lineIndex].length) {
@@ -99,13 +91,13 @@ const TypingText = ({ texts, className }) => {
       className={`${className} flex flex-col items-center`}
       style={{ minWidth: "max-content", height: "120px" }}
     >
-      <div className="h-[50px] w-full text-center">
+      <div className="h-[50px] w-full text-center text-4xl md:text-5xl">
         {displayTexts[0]}
         {lineIndex === 0 && (
           <span className="text-indigo-500 animate-blink">|</span>
         )}
       </div>
-      <div className="h-[50px] w-full text-center mt-2">
+      <div className="h-[50px] w-full text-center mt-2 text-xl md:text-3xl">
         {lineIndex > 0 && displayTexts[1]}
         {lineIndex > 0 && (
           <span className="text-indigo-500 animate-blink">|</span>
@@ -115,7 +107,6 @@ const TypingText = ({ texts, className }) => {
   );
 };
 
-// Social Icons Component
 const SocialIcon = ({ href, icon: Icon }) => (
   <motion.a
     href={href}
